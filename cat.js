@@ -1,7 +1,14 @@
+var Mouse = require('./Mouse');
 function Cat() {
     this.stomatch = [];
 }
-Cat.prototype.eat1 = function (Mouse) {
-    this.stomatch.push(Mouse);
+Cat.prototype.eat = function (animal) {
+    if(animal instanceof Mouse)
+    {
+        this.stomatch.push(animal);
+    }
+    else{
+        throw new Error('Cat only eat mouse');
+    }
 }
 module.exports = Cat;
