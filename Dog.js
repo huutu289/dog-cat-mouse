@@ -12,4 +12,4 @@ Dog.prototype.run = function(){
 Dog.prototype.sayHi = function(){
     console.log('hi my name is ' + this.name);
 }
-module.export = Dog;
+module.exports = Dog;
